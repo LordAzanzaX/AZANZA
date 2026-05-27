@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Quiénes Somos | Azanza</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet"/>
+<style>
+:root{--azul:#1a4172;--azul-med:#1e5799;--azul-claro:#2980b9;--azul-oscuro:#0f2744;--blanco:#ffffff;--gris-bg:#f2f6fb;--gris-txt:#586a7c;--acento:#3da0d8;--borde:rgba(26,65,114,0.1)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Montserrat',sans-serif;background:var(--blanco);color:#1a2a3a;overflow-x:hidden}
+.topbar{background:var(--azul-oscuro);padding:7px 5vw;display:flex;justify-content:space-between;align-items:center;font-size:12px;color:rgba(255,255,255,0.65)}
+.topbar-left{display:flex;gap:20px;align-items:center}
+.topbar-left a{color:rgba(255,255,255,0.65);text-decoration:none;display:flex;align-items:center;gap:6px;transition:color .2s}
+.topbar-left a:hover{color:white}
+.topbar-redes{display:flex;gap:10px;align-items:center}
+.topbar-redes a{color:rgba(255,255,255,0.65);text-decoration:none;display:flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:6px;border:1px solid rgba(255,255,255,0.15);transition:all .2s}
+.topbar-redes a:hover{color:white;border-color:rgba(255,255,255,0.5);background:rgba(255,255,255,0.08)}
+.topbar-redes svg{width:14px;height:14px;fill:currentColor}
+nav{position:sticky;top:0;z-index:200;background:var(--azul);display:flex;align-items:center;justify-content:space-between;padding:0 5vw;height:68px;box-shadow:0 2px 20px rgba(15,39,68,.25)}
+.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.nav-links{display:flex;align-items:center;gap:4px}
+.nav-links a{color:rgba(255,255,255,.78);font-size:13px;font-weight:500;text-decoration:none;padding:8px 14px;border-radius:6px;transition:all .2s}
+.nav-links a:hover{color:white;background:rgba(255,255,255,.09)}
+.nav-links .nb{background:var(--acento);color:white!important;padding:9px 20px;font-weight:600}
+.nav-links .nb:hover{background:#2d8fc8}
+.hb{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.hb span{width:24px;height:2px;background:white;border-radius:2px;display:block}
+/* HERO INTERNO */
+.page-hero{background:linear-gradient(130deg,var(--azul-oscuro) 0%,var(--azul) 100%);padding:80px 5vw 70px;color:white;text-align:center}
+.page-hero-tag{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--acento);margin-bottom:12px}
+.page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(36px,5vw,58px);font-weight:700;margin-bottom:16px}
+.page-hero p{font-size:16px;color:rgba(255,255,255,.75);max-width:600px;margin:0 auto;line-height:1.8}
+/* CONTENIDO */
+.inner{max-width:1100px;margin:0 auto}
+section{padding:80px 5vw}
+.stag{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--azul-claro);margin-bottom:10px}
+.stitulo{font-family:'Playfair Display',serif;font-size:clamp(28px,3.5vw,44px);font-weight:700;color:var(--azul);line-height:1.1;margin-bottom:16px}
+.ssub{font-size:15px;color:var(--gris-txt);line-height:1.8;margin-bottom:40px}
+/* HISTORIA */
+.historia-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.historia-texto p{font-size:15px;color:var(--gris-txt);line-height:1.9;margin-bottom:20px}
+.historia-texto strong{color:var(--azul)}
+.historia-card{background:linear-gradient(135deg,var(--azul),var(--azul-med));border-radius:20px;padding:40px;color:white;position:relative;overflow:hidden}
+.historia-card::before{content:'';position:absolute;top:-40px;right:-40px;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,.05)}
+.historia-card-n{font-family:'Playfair Display',serif;font-size:80px;font-weight:700;color:rgba(255,255,255,.12);line-height:1;position:absolute;top:20px;right:24px}
+.historia-card h3{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;margin-bottom:12px;position:relative}
+.historia-card p{font-size:14px;color:rgba(255,255,255,.75);line-height:1.7;position:relative}
+/* VALORES */
+#valores{background:var(--gris-bg)}
+.valores-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.valor-card{background:white;border-radius:16px;padding:32px 28px;border:1.5px solid var(--borde);transition:all .3s}
+.valor-card:hover{border-color:var(--azul-claro);transform:translateY(-4px);box-shadow:0 16px 40px rgba(26,65,114,.1)}
+.valor-ico{width:52px;height:52px;background:linear-gradient(135deg,var(--azul),var(--azul-claro));border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+.valor-ico svg{width:24px;height:24px;stroke:white;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.valor-titulo{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--azul);margin-bottom:10px}
+.valor-desc{font-size:13px;color:var(--gris-txt);line-height:1.75}
+/* MISION VISION */
+.mv-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.mv-card{border-radius:20px;padding:40px;position:relative;overflow:hidden}
+.mv-card.mision{background:linear-gradient(135deg,var(--azul),var(--azul-med))}
+.mv-card.vision{background:linear-gradient(135deg,var(--azul-med),var(--azul-claro))}
+.mv-card::before{content:'';position:absolute;top:-30px;right:-30px;width:160px;height:160px;border-radius:50%;background:rgba(255,255,255,.06)}
+.mv-tag{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:12px;position:relative}
+.mv-card h3{font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:white;margin-bottom:14px;position:relative}
+.mv-card p{font-size:14px;color:rgba(255,255,255,.8);line-height:1.8;position:relative}
+/* FOOTER */
+footer{background:#0a1929;padding:48px 5vw 28px}
+.ftop{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.08);max-width:1200px;margin:0 auto}
+.fbrand-logo{font-family:'Montserrat',sans-serif;font-size:22px;font-weight:800;color:white;letter-spacing:6px;margin-bottom:12px;display:flex;align-items:center;gap:12px}
+.fbrand p{font-size:13px;color:rgba(255,255,255,.45);line-height:1.7;max-width:280px;margin-bottom:20px}
+.fredes{display:flex;gap:10px}
+.frd{width:36px;height:36px;border-radius:9px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.6);text-decoration:none;transition:all .2s}
+.frd:hover{background:rgba(255,255,255,.14);color:white}
+.frd svg{width:16px;height:16px;fill:currentColor}
+.fcol h4{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:16px}
+.fcol ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.fcol ul li a{color:rgba(255,255,255,.55);font-size:13px;text-decoration:none;transition:color .2s}
+.fcol ul li a:hover{color:white}
+.fbot{max-width:1200px;margin:24px auto 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:12px;color:rgba(255,255,255,.3)}
+.rev{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease}
+.rev.in{opacity:1;transform:none}
+@media(max-width:960px){.historia-grid{grid-template-columns:1fr}.valores-grid{grid-template-columns:1fr 1fr}.mv-grid{grid-template-columns:1fr}.ftop{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.valores-grid{grid-template-columns:1fr}.nav-links{display:none;position:absolute;top:68px;left:0;right:0;background:var(--azul);flex-direction:column;padding:16px 5vw;gap:4px}.nav-links.open{display:flex}.hb{display:flex}.ftop{grid-template-columns:1fr}.topbar-left{display:none}}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="topbar-left">
+    <a href="tel:3333424040"><svg viewBox="0 0 24 24" style="width:13px;height:13px"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>(33) 3342 4040</a>
+    <a href="mailto:clientes@azanza.com"><svg viewBox="0 0 24 24" style="width:13px;height:13px"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>clientes@azanza.com</a>
+  </div>
+  <div class="topbar-redes">
+    <a href="https://www.facebook.com/AzanzaOficial" target="_blank"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+    <a href="https://www.instagram.com/azanzaoficial" target="_blank"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" style="fill:none;stroke:currentColor;stroke-width:1.8"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" style="fill:none;stroke:currentColor;stroke-width:1.8"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" style="stroke:currentColor;stroke-width:2;stroke-linecap:round"/></svg></a>
+    <a href="https://wa.me/5213334734084" target="_blank"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" style="fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round"/></svg></a>
+  </div>
+</div>
+<nav id="nav">
+  <a class="nav-logo" href="index.html">
+    <img src="azanza solo logo.png" height="44" style="border-radius:8px;display:block"/>
+    <img src="azanza solo letras.png" height="24" style="display:block"/>
+  </a>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html#servicios">Servicios</a>
+    <a href="quienes-somos.html" style="color:white;font-weight:600">Nosotros</a>
+    <a href="organigrama.html">Organigrama</a>
+    <a href="index.html#vacantes">Vacantes</a>
+    <a href="index.html#contacto" class="nb">Contáctanos</a>
+  </div>
+  <button class="hb" onclick="toggleNav()" aria-label="Menú"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-tag">La empresa</div>
+  <h1>Quiénes somos</h1>
+  <p>Más de 40 años siendo el puente entre el talento humano y las empresas líderes de Jalisco y México.</p>
+</div>
+
+<section>
+  <div class="inner">
+    <div class="historia-grid">
+      <div class="historia-texto">
+        <div class="stag rev">Nuestra historia</div>
+        <h2 class="stitulo rev">Cuatro décadas<br>de experiencia</h2>
+        <p class="rev">Grupo Azanza nació en Guadalajara, Jalisco en 1985 con una misión clara: ser <strong>el lado humano de las empresas</strong>. Desde nuestros inicios, nos dedicamos a entender las necesidades reales del mercado laboral y a conectar a las personas correctas con las organizaciones adecuadas.</p>
+        <p class="rev">A lo largo de más de cuatro décadas hemos evolucionado, incorporando nuevas metodologías, tecnologías y servicios para mantenernos a la vanguardia del reclutamiento y la selección de personal en México.</p>
+        <p class="rev">Hoy somos un equipo de <strong>19 profesionales</strong> comprometidos con la calidad, la transparencia y el apego total a la ley, ofreciendo soluciones integrales en Capital Humano para empresas de todos los sectores.</p>
+      </div>
+      <div>
+        <div class="historia-card rev">
+          <div class="historia-card-n">40</div>
+          <h3>Años transformando empresas</h3>
+          <p>Fundada en 1985 en Guadalajara, Jalisco. Tres décadas y media de trayectoria ininterrumpida al servicio del Capital Humano en México.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="inner">
+    <div class="stag rev" style="text-align:center">Nuestro propósito</div>
+    <h2 class="stitulo rev" style="text-align:center;max-width:600px;margin:0 auto 16px">Misión y Visión</h2>
+    <p class="ssub rev" style="text-align:center;margin:0 auto 48px">Los principios que guían cada decisión que tomamos.</p>
+    <div class="mv-grid">
+      <div class="mv-card mision rev">
+        <div class="mv-tag">Misión</div>
+        <h3>Lo que hacemos hoy</h3>
+        <p>Brindar soluciones integrales de Capital Humano a las empresas, identificando y conectando el talento adecuado con las organizaciones correctas, a través de procesos certificados, un trato humano y personalizado, y total apego a la ley — siendo el aliado estratégico que nuestros socios necesitan.</p>
+      </div>
+      <div class="mv-card vision rev">
+        <div class="mv-tag">Visión</div>
+        <h3>Hacia dónde vamos</h3>
+        <p>Ser la empresa de Capital Humano de referencia en el occidente de México, reconocida por la calidad de nuestros procesos, la satisfacción de nuestros socios empresariales y candidatos, y por ser un equipo que transforma vidas a través del trabajo digno y bien remunerado.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="valores" style="background:var(--gris-bg)">
+  <div class="inner">
+    <div class="stag rev" style="text-align:center">Lo que nos define</div>
+    <h2 class="stitulo rev" style="text-align:center;max-width:500px;margin:0 auto 16px">Nuestros valores</h2>
+    <p class="ssub rev" style="text-align:center;margin:0 auto 48px">Los principios que guían nuestro trabajo diario.</p>
+    <div class="valores-grid">
+      <div class="valor-card rev">
+        <div class="valor-ico"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div class="valor-titulo">Integridad</div>
+        <p class="valor-desc">Actuamos con honestidad y transparencia en cada proceso. Nuestros socios y candidatos pueden confiar plenamente en nosotros.</p>
+      </div>
+      <div class="valor-card rev">
+        <div class="valor-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <div class="valor-titulo">Compromiso</div>
+        <p class="valor-desc">Nos involucramos a fondo con cada proceso, desde el diseño del perfil hasta la colocación exitosa del candidato.</p>
+      </div>
+      <div class="valor-card rev">
+        <div class="valor-ico"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+        <div class="valor-titulo">Humanismo</div>
+        <p class="valor-desc">Creemos que detrás de cada currículum hay una persona con sueños. Tratamos a todos con respeto, empatía y dignidad.</p>
+      </div>
+      <div class="valor-card rev">
+        <div class="valor-ico"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+        <div class="valor-titulo">Calidad</div>
+        <p class="valor-desc">Procesos certificados y mejora continua. Entregamos resultados que superan las expectativas de nuestros socios.</p>
+      </div>
+      <div class="valor-card rev">
+        <div class="valor-ico"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
+        <div class="valor-titulo">Apego a la ley</div>
+        <p class="valor-desc">Todos nuestros procesos se realizan con total cumplimiento legal. Cuidamos a nuestros socios y a los candidatos.</p>
+      </div>
+      <div class="valor-card rev">
+        <div class="valor-ico"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+        <div class="valor-titulo">Innovación</div>
+        <p class="valor-desc">Adoptamos estrategias modernas en entrevistas, evaluaciones y búsqueda de talento para mantenernos a la vanguardia.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="ftop">
+    <div class="fbrand">
+      <div class="fbrand-logo"><img src="azanza solo logo.png" height="32" style="border-radius:6px;display:block"/> AZANZA</div>
+      <p>¡El lado humano de tu empresa! Soluciones integrales en Capital Humano desde 1985. Guadalajara, Jalisco, México.</p>
+      <div class="fredes">
+        <a class="frd" href="https://www.facebook.com/AzanzaOficial" target="_blank"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+        <a class="frd" href="https://www.instagram.com/azanzaoficial" target="_blank"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" style="fill:none;stroke:currentColor;stroke-width:1.8"/><circle cx="12" cy="12" r="4" style="fill:none;stroke:currentColor;stroke-width:1.8"/><circle cx="17.5" cy="6.5" r="1" style="fill:currentColor"/></svg></a>
+        <a class="frd" href="https://wa.me/5213334734084" target="_blank"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" style="fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round"/></svg></a>
+      </div>
+    </div>
+    <div class="fcol">
+      <h4>Empresa</h4>
+      <ul>
+        <li><a href="quienes-somos.html">Quiénes somos</a></li>
+        <li><a href="organigrama.html">Organigrama</a></li>
+        <li><a href="aviso-privacidad.html">Aviso de Privacidad</a></li>
+        <li><a href="terminos.html">Términos y Condiciones</a></li>
+      </ul>
+    </div>
+    <div class="fcol">
+      <h4>Servicios</h4>
+      <ul>
+        <li><a href="index.html#servicios">Reclutamiento y Selección</a></li>
+        <li><a href="index.html#servicios">Psicometrías</a></li>
+        <li><a href="index.html#servicios">Estudios Socioeconómicos</a></li>
+        <li><a href="index.html#vacantes">Bolsa de trabajo</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="fbot">
+    <span>© 2025 Grupo Azanza · Todos los derechos reservados</span>
+    <span>Guadalajara, Jalisco, México</span>
+  </div>
+</footer>
+<script>
+function toggleNav(){document.getElementById('navLinks').classList.toggle('open')}
+const obs=new IntersectionObserver((e)=>{e.forEach((el,i)=>{if(el.isIntersecting){setTimeout(()=>el.target.classList.add('in'),i*70);obs.unobserve(el.target)}})},{threshold:0.08});
+document.querySelectorAll('.rev').forEach(r=>obs.observe(r));
+</script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Términos y Condiciones | Azanza</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet"/>
+<style>
+:root{--azul:#1a4172;--azul-med:#1e5799;--azul-claro:#2980b9;--azul-oscuro:#0f2744;--blanco:#ffffff;--gris-bg:#f2f6fb;--gris-txt:#586a7c;--acento:#3da0d8;--borde:rgba(26,65,114,0.1)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Montserrat',sans-serif;background:var(--blanco);color:#1a2a3a;overflow-x:hidden}
+.topbar{background:var(--azul-oscuro);padding:7px 5vw;display:flex;justify-content:space-between;align-items:center;font-size:12px;color:rgba(255,255,255,0.65)}
+.topbar-left{display:flex;gap:20px;align-items:center}
+.topbar-left a{color:rgba(255,255,255,0.65);text-decoration:none;display:flex;align-items:center;gap:6px}
+.topbar-left a:hover{color:white}
+.topbar-redes{display:flex;gap:10px}
+.topbar-redes a{color:rgba(255,255,255,0.65);text-decoration:none;display:flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:6px;border:1px solid rgba(255,255,255,0.15);transition:all .2s}
+.topbar-redes a:hover{color:white;background:rgba(255,255,255,0.08)}
+.topbar-redes svg{width:14px;height:14px;fill:currentColor}
+nav{position:sticky;top:0;z-index:200;background:var(--azul);display:flex;align-items:center;justify-content:space-between;padding:0 5vw;height:68px;box-shadow:0 2px 20px rgba(15,39,68,.25)}
+.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.nav-links{display:flex;align-items:center;gap:4px}
+.nav-links a{color:rgba(255,255,255,.78);font-size:13px;font-weight:500;text-decoration:none;padding:8px 14px;border-radius:6px;transition:all .2s}
+.nav-links a:hover{color:white;background:rgba(255,255,255,.09)}
+.nav-links .nb{background:var(--acento);color:white!important;padding:9px 20px;font-weight:600}
+.hb{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.hb span{width:24px;height:2px;background:white;border-radius:2px;display:block}
+.page-hero{background:linear-gradient(130deg,var(--azul-oscuro) 0%,var(--azul) 100%);padding:70px 5vw 60px;color:white;text-align:center}
+.page-hero-tag{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--acento);margin-bottom:12px}
+.page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(30px,4vw,50px);font-weight:700;margin-bottom:12px}
+.page-hero p{font-size:14px;color:rgba(255,255,255,.65);max-width:500px;margin:0 auto}
+.legal-wrap{padding:70px 5vw;max-width:860px;margin:0 auto}
+.legal-fecha{font-size:12px;color:var(--gris-txt);margin-bottom:40px;padding-bottom:20px;border-bottom:1px solid var(--borde)}
+.legal-seccion{margin-bottom:40px}
+.legal-seccion h2{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--azul);margin-bottom:14px;padding-left:14px;border-left:4px solid var(--azul-claro)}
+.legal-seccion p{font-size:14px;color:var(--gris-txt);line-height:1.9;margin-bottom:12px}
+.legal-seccion ul{list-style:none;margin:12px 0;display:flex;flex-direction:column;gap:8px}
+.legal-seccion ul li{font-size:14px;color:var(--gris-txt);padding-left:18px;position:relative;line-height:1.7}
+.legal-seccion ul li::before{content:'';position:absolute;left:0;top:8px;width:6px;height:6px;border-radius:50%;background:var(--azul-claro)}
+.legal-contacto{background:var(--gris-bg);border-radius:14px;padding:24px 28px;margin-top:16px;border:1.5px solid var(--borde)}
+.legal-contacto p{font-size:13px;color:var(--gris-txt);line-height:1.8;margin:0}
+.legal-contacto strong{color:var(--azul)}
+footer{background:#0a1929;padding:48px 5vw 28px}
+.ftop{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.08);max-width:1200px;margin:0 auto}
+.fbrand-logo{font-size:22px;font-weight:800;color:white;letter-spacing:6px;margin-bottom:12px;display:flex;align-items:center;gap:12px}
+.fbrand p{font-size:13px;color:rgba(255,255,255,.45);line-height:1.7;max-width:280px;margin-bottom:20px}
+.fredes{display:flex;gap:10px}
+.frd{width:36px;height:36px;border-radius:9px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.6);text-decoration:none;transition:all .2s}
+.frd:hover{background:rgba(255,255,255,.14);color:white}
+.frd svg{width:16px;height:16px;fill:currentColor}
+.fcol h4{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:16px}
+.fcol ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.fcol ul li a{color:rgba(255,255,255,.55);font-size:13px;text-decoration:none;transition:color .2s}
+.fcol ul li a:hover{color:white}
+.fbot{max-width:1200px;margin:24px auto 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:12px;color:rgba(255,255,255,.3)}
+@media(max-width:640px){.nav-links{display:none;position:absolute;top:68px;left:0;right:0;background:var(--azul);flex-direction:column;padding:16px 5vw;gap:4px}.nav-links.open{display:flex}.hb{display:flex}.ftop{grid-template-columns:1fr}.topbar-left{display:none}}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="topbar-left">
+    <a href="tel:3333424040"><svg viewBox="0 0 24 24" style="width:13px;height:13px"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>(33) 3342 4040</a>
+    <a href="mailto:clientes@azanza.com"><svg viewBox="0 0 24 24" style="width:13px;height:13px"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>clientes@azanza.com</a>
+  </div>
+  <div class="topbar-redes">
+    <a href="https://www.facebook.com/AzanzaOficial" target="_blank"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+    <a href="https://www.instagram.com/azanzaoficial" target="_blank"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" style="fill:none;stroke:currentColor;stroke-width:1.8"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" style="fill:none;stroke:currentColor;stroke-width:1.8"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" style="stroke:currentColor;stroke-width:2;stroke-linecap:round"/></svg></a>
+    <a href="https://wa.me/5213334734084" target="_blank"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" style="fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round"/></svg></a>
+  </div>
+</div>
+<nav id="nav">
+  <a class="nav-logo" href="index.html">
+    <img src="azanza solo logo.png" height="44" style="border-radius:8px;display:block"/>
+    <img src="azanza solo letras.png" height="24" style="display:block"/>
+  </a>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html#servicios">Servicios</a>
+    <a href="quienes-somos.html">Nosotros</a>
+    <a href="index.html#vacantes">Vacantes</a>
+    <a href="index.html#contacto" class="nb">Contáctanos</a>
+  </div>
+  <button class="hb" onclick="toggleNav()" aria-label="Menú"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-tag">Legal</div>
+  <h1>Términos y Condiciones</h1>
+  <p>Grupo Azanza, S.A. de C.V. · Guadalajara, Jalisco, México</p>
+</div>
+
+<div class="legal-wrap">
+  <p class="legal-fecha">Última actualización: enero de 2025 · Al utilizar nuestros servicios o sitio web, usted acepta los presentes términos y condiciones.</p>
+
+  <div class="legal-seccion">
+    <h2>1. Aceptación de los Términos</h2>
+    <p>Al acceder y utilizar el sitio web de Grupo Azanza (www.grupoazanza.com) o contratar cualquiera de nuestros servicios, usted acepta estar sujeto a los presentes Términos y Condiciones de Uso. Si no está de acuerdo con alguno de estos términos, le pedimos no utilizar nuestros servicios.</p>
+  </div>
+
+  <div class="legal-seccion">
+    <h2>2. Descripción de los Servicios</h2>
+    <p>Grupo Azanza ofrece los siguientes servicios profesionales de Capital Humano:</p>
+    <ul>
+      <li><strong>Reclutamiento y Selección de Personal:</strong> Identificación y presentación de candidatos calificados para cubrir vacantes en empresas clientes, con garantía de hasta 45 días naturales.</li>
+      <li><strong>Psicometrías:</strong> Aplicación e interpretación de baterías de evaluaciones psicológicas y de competencias, con reportes detallados por puesto.</li>
+      <li><strong>Estudios Socioeconómicos:</strong> Investigación y verificación de la situación laboral, familiar, académica y económica de candidatos o colaboradores.</li>
+    </ul>
+  </div>
+
+  <div class="legal-seccion">
+    <h2>3. Uso del Sitio Web</h2>
+    <p>El usuario se compromete a utilizar el sitio web de conformidad con la ley y los presentes términos, absteniéndose de:</p>
+    <ul>
+      <li>Introducir, difundir o transmitir contenidos ilícitos, fraudulentos o que vulneren derechos de terceros</li>
+      <li>Reproducir, copiar o distribuir el contenido del sitio sin autorización expresa de Grupo Azanza</li>
+      <li>Utilizar el sitio con fines comerciales no autorizados</li>
+      <li>Intentar acceder a áreas restringidas del sitio o sistemas informáticos</li>
+    </ul>
+  </div>
+
+  <div class="legal-seccion">
+    <h2>4. Garantía de los Servicios</h2>
+    <p>Grupo Azanza ofrece una <strong>garantía de hasta 45 días naturales</strong> en los servicios de reclutamiento y selección, contados a partir de la fecha de ingreso del candidato colocado. Esta garantía aplica bajo las siguientes condiciones:</p>
+    <ul>
+      <li>La empresa cliente debe notificar por escrito la situación dentro del período de garantía</li>
+      <li>La garantía no aplica en casos de reducción de personal, cierres de área o cambios organizacionales</li>
+      <li>La garantía cubre la presentación de nuevos candidatos, no reembolso monetario</li>
+      <li>Las condiciones específicas de garantía se detallan en el contrato de servicios firmado entre las partes</li>
+    </ul>
+  </div>
+
+  <div class="legal-seccion">
+    <h2>5. Propiedad Intelectual</h2>
+    <p>Todo el contenido del sitio web de Grupo Azanza, incluyendo textos, imágenes, logotipos, diseño gráfico y código fuente, es propiedad de Grupo Azanza, S.A. de C.V. y está protegido por las leyes mexicanas e internacionales de propiedad intelectual. Queda prohibida su reproducción total o parcial sin autorización escrita.</p>
+  </div>
+
+  <div class="legal-seccion">
+    <h2>6. Limitación de Responsabilidad</h2>
+    <p>Grupo Azanza no será responsable por daños directos, indirectos o consecuentes derivados del uso o imposibilidad de uso del sitio web. La información contenida en el sitio se proporciona "tal cual", sin garantías de ningún tipo. Grupo Azanza se reserva el derecho de modificar, suspender o discontinuar el sitio en cualquier momento.</p>
+  </div>
+
+  <div class="legal-seccion">
+    <h2>7. Legislación Aplicable</h2>
+    <p>Los presentes Términos y Condiciones se rigen por las leyes de los Estados Unidos Mexicanos. Para cualquier controversia derivada de estos términos, las partes se someten a la jurisdicción de los tribunales competentes de la ciudad de Guadalajara, Jalisco, renunciando a cualquier otro fuero que pudiera corresponderles.</p>
+    <div class="legal-contacto">
+      <p><strong>¿Tienes dudas sobre estos términos?</strong><br/>
+      Contáctanos en <strong>clientes@azanza.com</strong> o llámanos al <strong>(33) 3342 4040</strong><br/>
+      Lunes a Viernes · 9:00 am – 5:00 pm</p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="ftop">
+    <div class="fbrand">
+      <div class="fbrand-logo"><img src="azanza solo logo.png" height="32" style="border-radius:6px;display:block"/> AZANZA</div>
+      <p>¡El lado humano de tu empresa! Soluciones integrales en Capital Humano desde 1985. Guadalajara, Jalisco, México.</p>
+      <div class="fredes">
+        <a class="frd" href="https://www.facebook.com/AzanzaOficial" target="_blank"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+        <a class="frd" href="https://www.instagram.com/azanzaoficial" target="_blank"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" style="fill:none;stroke:currentColor;stroke-width:1.8"/><circle cx="12" cy="12" r="4" style="fill:none;stroke:currentColor;stroke-width:1.8"/><circle cx="17.5" cy="6.5" r="1" style="fill:currentColor"/></svg></a>
+        <a class="frd" href="https://wa.me/5213334734084" target="_blank"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" style="fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round"/></svg></a>
+      </div>
+    </div>
+    <div class="fcol"><h4>Empresa</h4><ul><li><a href="quienes-somos.html">Quiénes somos</a></li><li><a href="organigrama.html">Organigrama</a></li><li><a href="aviso-privacidad.html">Aviso de Privacidad</a></li><li><a href="terminos.html">Términos y Condiciones</a></li></ul></div>
+    <div class="fcol"><h4>Servicios</h4><ul><li><a href="index.html#servicios">Reclutamiento y Selección</a></li><li><a href="index.html#servicios">Psicometrías</a></li><li><a href="index.html#servicios">Estudios Socioeconómicos</a></li><li><a href="index.html#vacantes">Bolsa de trabajo</a></li></ul></div>
+  </div>
+  <div class="fbot"><span>© 2025 Grupo Azanza · Todos los derechos reservados</span><span>Guadalajara, Jalisco, México</span></div>
+</footer>
+<script>
+function toggleNav(){document.getElementById('navLinks').classList.toggle('open')}
+</script>
+</body>
+</html>
